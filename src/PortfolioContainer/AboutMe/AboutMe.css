@@ -1,0 +1,23 @@
+/* .heading-separetor{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 180px;
+}
+.separetor-line{
+    width: 100%;
+    height: 2px;
+    background-color: var(--carribean);
+}
+.separetor-blob{
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+.separetor-blob div{
+    width: 35px;
+    border-radius: 10px;
+    background-color: var(--dark-tangerine);
+} */
