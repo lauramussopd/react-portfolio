@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
-import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading"; // Usa PascalCase per i componenti
+import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
+import "./AboutMe.css";
 
 export default function AboutMe(props) {
   let fadeInScreenHandler = (screen) => {
@@ -10,10 +11,18 @@ export default function AboutMe(props) {
   };
   const fadeInSubscription =
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+
   const SCREEN_CONSTANTS = {
-    descriptions: "lorem ipsum",
+    descriptions: "I'm an enthusiastic front-end developer with a keen eye for design, skilled in HTML, CSS, and JavaScript. I focus on creating user-friendly digital experiences and enjoy learning new front-end technologies. I excel in collaboration, clear communication, and creative problem-solving while effectively managing my time to meet deadlines. I am adaptable, dedicated, and fluent in English, Italian, Spanish, and Portuguese.",
     highlights: {
-      bullets: ["Web Developer", "Web Developer", "Web Developer"],
+      bullets: [
+        "Web Developer",
+        "Web Developer",
+        "Web Developer",
+        "Web Developer",
+        "Web Developer",
+        "Web Developer",
+      ],
       heading: "Here are a few highlights:",
     },
   };
@@ -29,21 +38,24 @@ export default function AboutMe(props) {
   return (
     <div className="about-me-container screen-container" id={props.id || ""}>
       <div className="about-me-parent">
-        {/* Usa ScreenHeading come un componente, non come una prop */}
-        <ScreenHeading title={"About Me"} subHeading={"A little of me"} />
+        <ScreenHeading title={"About Me"} subHeading={"A Little Of Me"} />
         <div className="about-me-card">
-          <div className="about-me-profile">
-            <div className="about-me-details">
-              <span className="about-me-descriptions">
-                {SCREEN_CONSTANTS.descriptions}
-              </span>
-              <div className="about-me-highlight">
-                <div className="highlight-heading">
-                <span>
-                {SCREEN_CONSTANTS.highlights.heading}
-              </span>
-                </div>
+          <div className="about-me-profile"></div>
+          <div className="about-me-details">
+            <span className="about-me-descriptions">
+              {SCREEN_CONSTANTS.descriptions}
+            </span>
+            <div className="about-me-highlight">
+              <div className="highlight-heading">
+                <span>{SCREEN_CONSTANTS.highlights.heading}</span>
               </div>
+              {renderHighlight()}
+            </div>
+            <div className="about-me-options">
+              <button className="btn highlighted-btn"> Hire Me </button>
+              <a href="LauraMussoCV.pdf" download="Laura Musso LauraMussoCV.pdf">
+                <button className="btn highlighted-btn"> Get Resume </button>
+              </a>
             </div>
           </div>
         </div>

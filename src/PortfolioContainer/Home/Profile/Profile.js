@@ -48,8 +48,8 @@ export default function Profile() {
           <div className="profile-options">
             <button className="btn highlighted-btn"> Hire Me </button>
             <a
-              href="CV-laura-musso.pdf"
-              download="Laura Musso CV-laura-musso.pdf"
+              href="LauraMussoCV.pdf"
+              download="Laura Musso LauraMussoCV.pdf"
             >
               <button className="btn highlighted-btn"> Get Resume </button>
             </a>
