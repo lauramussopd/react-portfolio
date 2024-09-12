@@ -3,25 +3,20 @@ import Home from "../PortfolioContainer/Home/Home";
 import AboutMe from "../PortfolioContainer/AboutMe/AboutMe";
 import Resume from "../PortfolioContainer/Resume/Resume";
 
+
 // Definisce un array di oggetti che rappresentano gli schermi disponibili
 export const TOTAL_SCREENS = [
     {
-        // Nome dello schermo
         screen_name: "Home",
-        // Componente associato a questo schermo
         component: Home, 
     },
     {
-        // Nome dello schermo
-        screen_name: "Resume",
-        // Componente associato a questo schermo
-        component: Resume, 
+        screen_name: "AboutMe",
+        component: AboutMe, 
     },
     {
-        // Nome dello schermo
-        screen_name: "AboutMe",
-        // Componente associato a questo schermo
-        component: AboutMe, 
+        screen_name: "Resume",
+        component: Resume, 
     }
 ]
 
