@@ -17,11 +17,11 @@ export default function AboutMe(props) {
     highlights: {
       bullets: [
         "Web Developer",
-        "Web Developer",
-        "Web Developer",
-        "Web Developer",
-        "Web Developer",
-        "Web Developer",
+        "Front-End Development Expertise",
+        "Technical Support Specialist Experience",
+        "Certifications in Modern Technologies",
+        "Advanced Design Skills",
+        "Multilingual Communication",
       ],
       heading: "Here are a few highlights:",
     },
