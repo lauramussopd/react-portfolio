@@ -1,6 +1,62 @@
-.contact-me-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.central-form {
+    padding: 30px; 
+    background-color: var(--carribean); 
+    border-radius: 10px;
+    margin: 0 auto;
+    color: white;
+  }
+  
+  .central-form h2 {
+    margin-bottom: 20px;
+  }
+  
+  .back-form {
+    max-width: 500px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd; 
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease-in-out;
+    outline: none;
+  }
+  
+  input:focus,
+  textarea:focus {
+    border-color: none;
+    outline: none;
+  }
+  
+  textarea {
+    height: 120px; 
+    resize: vertical; 
+  }
+  
+  .send-btn {
+    text-align: center;
+  }
+  
+  .send-btn button {
+    background-color: var(--tangerine); 
+    border: none;
+    padding: 10px 20px; 
+    border-radius: 25px;
+    font-size: 1em;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .send-btn button:hover,
+  .send-btn button:focus {
+    background-color: var(--dark-tangerine); /* Color on hover and focus */
+    outline: none; /* Remove default focus outline */
   }

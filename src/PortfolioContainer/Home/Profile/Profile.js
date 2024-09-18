@@ -1,19 +1,14 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
+import ScrollService from "../../../utilities/ScrollService";
 import "./Profile.css"
+
 
 export default function Profile() {
   return (
     <div className="profile-container">
       <div className="profile-parent">
         <div className="profile-details">
-          {/* <div className="colz">
-            <div className="colz-icon">
-              <a href="https://www.linkedin.com/in/laura-musso/">
-                <i className="fa fa-linkedin"></i>
-              </a>
-            </div>
-          </div> */}
           <div className="profile-details-name">
             <span className="primary-text">
               {" "}
@@ -46,7 +41,9 @@ export default function Profile() {
             </span>
           </div>
           <div className="profile-options">
-            <button className="btn highlighted-btn"> Hire Me </button>
+            <button className="btn highlighted-btn" 
+            onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
+            > Hire Me </button>
             <a
               href="LauraMussoCV.pdf"
               download="Laura Musso LauraMussoCV.pdf"

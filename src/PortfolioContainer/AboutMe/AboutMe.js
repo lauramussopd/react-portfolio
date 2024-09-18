@@ -1,16 +1,29 @@
-import React, { useEffect } from "react";
+import React,{ useEffect } from "react";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
 import "./AboutMe.css";
 
 export default function AboutMe(props) {
-  let fadeInScreenHandler = (screen) => {
-    if (screen.fadeScreen !== props.id) return;
-    Animations.animations.fadeInScreen(props.id);
-  };
-  const fadeInSubscription =
-    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+  // let fadeInScreenHandler = (screen) => {
+  //   if (screen.fadeInScreen !== props.id) return;
+  //   Animations.animations.fadeInScreen(props.id);
+  // };
+  // const fadeInSubscription =
+  //   ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+
+  useEffect(() => {
+    const fadeInScreenHandler = (screen) => {
+      if (screen.fadeInScreen !== props.id) return;
+      Animations.animations.fadeInScreen(props.id);
+    };
+
+    const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+
+    // Cleanup subscription on unmount
+    return () => fadeInSubscription.unsubscribe();
+  }, [props.id]);
+
 
   const SCREEN_CONSTANTS = {
     descriptions: "I'm an enthusiastic front-end developer with a keen eye for design, skilled in HTML, CSS, and JavaScript. I focus on creating user-friendly digital experiences and enjoy learning new front-end technologies. I excel in collaboration, clear communication, and creative problem-solving while effectively managing my time to meet deadlines. I am adaptable, dedicated, and fluent in English, Italian, Spanish, and Portuguese.",
@@ -52,7 +65,9 @@ export default function AboutMe(props) {
               {renderHighlight()}
             </div>
             <div className="about-me-options">
-              <button className="btn highlighted-btn"> Hire Me </button>
+              <button className="btn highlighted-btn"
+              onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
+              > Hire Me </button>
               <a href="LauraMussoCV.pdf" download="Laura Musso LauraMussoCV.pdf">
                 <button className="btn highlighted-btn"> Get Resume </button>
               </a>

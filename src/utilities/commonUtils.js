@@ -24,7 +24,7 @@ export const TOTAL_SCREENS = [
         component: Projects, 
     },
     {
-        screen_name: "ContactMe",
+        screen_name: "Contact Me",
         component: ContactMe, 
     }
 ]

@@ -1,39 +1,28 @@
 import React, { useState } from "react";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
-import ScrollService from "../../utilities/ScrollService";
-import Animations from "../../utilities/Animations";
 import "./Resume.css";
 
 const Resume = (props) => {
   const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
-  const [carouselOffSetStyle, setCarouselOffSetStyle] = useState({});
-
-  let fadeInScreenHandler = (screen) => {
-    if (screen.fadeScreen !== props.id) return;
-    Animations.animations.fadeInScreen(props.id);
-  };
-  const fadeInSubscription =
-    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+  const [carouselOffsetStyle, setCarouselOffsetStyle] = useState({});
 
   const ResumeHeading = (props) => {
     return (
       <div className="resume-heading">
         <div className="resume-main-heading">
           <div className="heading-bullet"></div>
-          <span>{props.heading ? props.heading : ""}</span>
-          {props.fromDate && props.toDate ? (
+          <span>{props.heading || ""}</span>
+          {props.fromDate && props.toDate && (
             <div className="heading-date">
-              {props.fromDate + "-" + props.toDate}
+              {props.fromDate} - {props.toDate}
             </div>
-          ) : (
-            <div></div>
           )}
         </div>
         <div className="resume-sub-heading">
-          <span>{props.subHeading ? props.subHeading : ""}</span>
+          <span>{props.subHeading || ""}</span>
         </div>
         <div className="resume-heading-description">
-          <span>{props.description ? props.description : ""}</span>
+          <span>{props.description || ""}</span>
         </div>
       </div>
     );
@@ -48,7 +37,7 @@ const Resume = (props) => {
   ];
 
   const programmingSkillsDetails = [
-    { skill: "Javascript" },
+    { skill: "JavaScript" },
     { skill: "Vue.JS" },
     { skill: "React" },
     { skill: "HTML" },
@@ -59,69 +48,62 @@ const Resume = (props) => {
   const projectDetails = [
     {
       title: "Personal Portfolio Website",
-      duration: {
-        fromDate: "2024",
-        toDate: "2024",
-      },
+      duration: { fromDate: "2024", toDate: "2024" },
       description:
         "A Personal Portfolio website to showcase all my details and projects at one place",
       subHeading: "Technologies Used: React JS, Bootstrap",
     },
     {
       title: "TODO Website",
-      duration: {
-        fromDate: "2024",
-        toDate: "2024",
-      },
+      duration: { fromDate: "2024", toDate: "2024" },
       description:
         "A simple To-do app that allows users to create an account, record tasks, edit them and mark them as complete. The app is linked to a database, where all the user and task data are stored.",
-      subHeading: "Tecnologies Used: Vue. JS, Pinia, Supabase, Bootstrap",
+      subHeading: "Technologies Used: Vue.JS, Pinia, Supabase, Bootstrap",
     },
   ];
 
   const resumeDetails = [
     <div className="resume-screen-container" key="education">
       <ResumeHeading
-        heading={"Ironhack"}
-        subHeading={"Front End Web Development"}
-        fromDate={"2023"}
-        toDate={"2024"}
+        heading="Ironhack"
+        subHeading="Front End Web Development"
+        fromDate="2023"
+        toDate="2024"
       />
       <ResumeHeading
-        heading={"42 Barcelona"}
-        subHeading={"Computer Science"}
-        fromDate={"2022"}
-        toDate={"2023"}
+        heading="42 Barcelona"
+        subHeading="Computer Science"
+        fromDate="2022"
+        toDate="2023"
       />
       <ResumeHeading
-        heading={"Universita’ Ca’ Foscari Venice"}
-        subHeading={"Master’s degree, Art History and Cultural Heritage"}
-        fromDate={"2016"}
-        toDate={"2019"}
+        heading="Universita’ Ca’ Foscari Venice"
+        subHeading="Master’s degree, Art History and Cultural Heritage"
+        fromDate="2016"
+        toDate="2019"
       />
     </div>,
     <div className="resume-screen-container" key="work-experience">
       <ResumeHeading
-        heading={"Technical Support Specialist & Junior front-end Developer"}
-        subHeading={"Etnia Eyewear Culture"}
-        fromDate={"2021"}
-        toDate={"present"}
+        heading="Technical Support Specialist & Junior Front-end Developer"
+        subHeading="Etnia Eyewear Culture"
+        fromDate="2021"
+        toDate="Present"
       />
       <div className="experience-description resume-description-text">
-        -Develop and maintain front-end components for company websites,
+        - Develop and maintain front-end components for company websites,
         ensuring a seamless user experience. Identify software bugs, open
         detailed tickets, and follow up to ensure timely resolution.
       </div>
       <div className="experience-description resume-description-text">
-        -Website & Software Testing, Identify software bugs, open detailed
+        - Website & Software Testing, identify software bugs, open detailed
         tickets, and follow up to ensure timely resolution.
       </div>
       <div className="experience-description resume-description-text">
-        -Assist the sales team by responding to customer inquiries, processing
-        orders, and maintaining sales databases (SAP, C4C, SQL)
+        - Assist the sales team by responding to customer inquiries, processing
+        orders, and maintaining sales databases (SAP, C4C, SQL).
       </div>
     </div>,
-
     <div
       className="resume-screen-container programming-skills-container"
       key="programming-skills"
@@ -133,15 +115,15 @@ const Resume = (props) => {
         </div>
       ))}
     </div>,
-    <div className="resume-screen-container" key={"projects"}>
-      {projectDetails.map((projectDetails, index) => (
+    <div className="resume-screen-container" key="projects">
+      {projectDetails.map((project, index) => (
         <ResumeHeading
           key={index}
-          heading={projectDetails.title}
-          subHeading={projectDetails.subHeading}
-          description={projectDetails.description}
-          fromDate={projectDetails.duration.fromDate}
-          toDate={projectDetails.duration.toDate}
+          heading={project.title}
+          subHeading={project.subHeading}
+          description={project.description}
+          fromDate={project.duration.fromDate}
+          toDate={project.duration.toDate}
         />
       ))}
     </div>,
@@ -162,11 +144,11 @@ const Resume = (props) => {
   ];
 
   const handleCarousel = (index) => {
-    let offSetHeight = 360;
-    let newCarouselOffSet = {
-      style: { transform: "translateY(" + index * offSetHeight * -1 + "px)" },
+    const offsetHeight = 360;
+    const newCarouselOffset = {
+      style: { transform: `translateY(${index * offsetHeight * -1}px)` },
     };
-    setCarouselOffSetStyle(newCarouselOffSet);
+    setCarouselOffsetStyle(newCarouselOffset);
     setSelectedBulletIndex(index);
   };
 
@@ -182,20 +164,20 @@ const Resume = (props) => {
         <img
           className="bullet-logo"
           src={require(`../../assets/Resume/${bullet.logoSrc}`)}
-          alt="ops, not working"
+          alt={bullet.label}
         />
         <span className="bullet-label">{bullet.label}</span>
       </div>
     ));
   };
 
-  const getResumeScreen = () => {
+  const getResumeScreens = () => {
     return (
       <div
-        style={carouselOffSetStyle.style}
+        style={carouselOffsetStyle.style}
         className="resume-details-carousel"
       >
-        {resumeDetails.map((resumeDetail) => resumeDetail)}
+        {resumeDetails.map((detail) => detail)}
       </div>
     );
   };
@@ -203,7 +185,7 @@ const Resume = (props) => {
   return (
     <div className="resume-container screen-container" id={props.id || ""}>
       <div className="resume-content">
-        <ScreenHeading title={"Resume"} subHeading={"My Formal Bio Details"} />
+        <ScreenHeading title="Resume" subHeading="My Formal Bio Details" />
         <div className="resume-card">
           <div className="resume-bullets">
             <div className="bullet-container">
@@ -211,10 +193,11 @@ const Resume = (props) => {
               <div className="bullets">{getBullets()}</div>
             </div>
           </div>
-          <div className="resume-bullet-details">{getResumeScreen()}</div>
+          <div className="resume-bullet-details">{getResumeScreens()}</div>
         </div>
       </div>
     </div>
   );
 };
+
 export default Resume;

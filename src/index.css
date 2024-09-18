@@ -98,13 +98,8 @@ body ::-webkit-scrollbar-thumb {
 .primary-btn {
   color: var(--white);
   font-size: 12px;
-  background-color: #006D77;
+  background-color: #006d77;
 }
-/* @media only screen and (max-width: 414px) {
-  .primary-btn {
-    font-size: 13px;
-  }
-} */
 
 .highlighted-btn:hover {
   background-color: var(--dark-tangerine);
@@ -116,20 +111,16 @@ body ::-webkit-scrollbar-thumb {
   font-size: 12px;
   background-color: var(--tangerine);
 }
-
+.highlighted-btn:focus {
+  outline: none;
+  box-shadow: none;
+}
 .red-border {
   border: 1px solid var(--error-message) !important;
 }
 
 .fade-in {
-  opacity: 0;
+  opacity: 1;
   transform: translateY(80px);
   transition: all 0.8s ease;
 }
-
-
-
-
-
-
-
