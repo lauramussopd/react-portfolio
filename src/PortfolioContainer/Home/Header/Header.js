@@ -14,11 +14,11 @@ export default function Header() {
   const [selectedScreen, setSelectedScreen] = useState(0);
   const [showHeaderOptions, setShowHeaderOptions] = useState(false);
 
-  const updateCurrentScreen = (currentScreen) => {
-    if (!currentScreen || !currentScreen.screenInView) return;
-    let screenIndex = GET_SCREEN_INDEX(currentScreen.screenInView);
-    if (screenIndex < 0) return;
-  };
+  // const updateCurrentScreen = (currentScreen) => {
+  //   if (!currentScreen || !currentScreen.screenInView) return;
+  //   let screenIndex = GET_SCREEN_INDEX(currentScreen.screenInView);
+  //   if (screenIndex < 0) return;
+  // };
   // let currentScreenSubscription =
   //   ScrollService.currentScreenBroadCaster.subscribe(updateCurrentScreen);
 
