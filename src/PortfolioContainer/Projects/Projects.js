@@ -52,14 +52,15 @@ export default function Projects(props) {
               {...options}
             >
               <div className="col-lg-12">
-                <div className="projects-item">
-                  <iframe
-                    src="https://pokemon-next-js-murex.vercel.app/"
-                    title="Project Showcase"
-                    className="project-iframe"
-                    allowFullScreen
-                  ></iframe>
-                </div>
+                <a
+                  href="https://museumofcandybootstrap.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="projects-item">
+                    <img src="img/projects/candy.png" alt="todo" />
+                  </div>
+                </a>
               </div>
               <div className="col-lg-12">
                 <a
