@@ -58,7 +58,7 @@ export default function Projects(props) {
                   rel="noopener noreferrer"
                 >
                   <div className="projects-item">
-                    <img src="img/projects/candy.png" alt="todo" />
+                    <img src="img/Projects/candy.png" alt="candy" />
                   </div>
                 </a>
               </div>
@@ -69,7 +69,7 @@ export default function Projects(props) {
                   rel="noopener noreferrer"
                 >
                   <div className="projects-item">
-                    <img src="img/projects/todo.png" alt="todo" />
+                    <img src="img/Projects/todo.png" alt="todo" />
                   </div>
                 </a>
               </div>
@@ -80,7 +80,7 @@ export default function Projects(props) {
                   rel="noopener noreferrer"
                 >
                   <div className="projects-item">
-                    <img src="img/projects/pokeapi2.png" alt="pokeapi" />
+                    <img src="img/Projects/pokeapi2.png" alt="pokeapi" />
                   </div>
                 </a>
               </div>
