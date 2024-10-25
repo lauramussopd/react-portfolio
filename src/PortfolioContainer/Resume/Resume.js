@@ -101,7 +101,7 @@ a seamless user experience.
       </div>
       <div className="experience-description resume-description-text">
         - Assist the sales team by responding to customer inquiries, processing
-        orders, and maintaining sales databases (SAP, C4C, SQL).
+        orders, and maintaining sales databases.
       </div>
     </div>,
     <div
@@ -134,7 +134,7 @@ a seamless user experience.
       />
       <ResumeHeading
         heading="Art"
-        description="I have a deep passion for art, particularly contemporary and historical works. I frequently visit galleries and museums to stay inspired and connected with the latest trends in the art world. I also enjoy exploring different art forms and techniques, which often influences my design work."
+        description="I have a deep passion for art, particularly contemporary and historical works. I also enjoy exploring different art forms and techniques, which often influences my design work."
       />
       <ResumeHeading
         heading="Sport"

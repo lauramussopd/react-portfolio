@@ -22,7 +22,7 @@
   margin: 14px 0 24px 0;
 }
 .profile-details-role h1 {
-  font-size: 40px;
+  font-size: 24px;
 }
 .primary-text {
   color: white;
@@ -108,6 +108,10 @@
   .profile-details .btn {
     margin: 0 !important;
   }
+
+  .profile-details-role h1 {
+    font-size: 24px;
+}
 }
 
 @media screen and (max-width: 375px) {
@@ -116,4 +120,7 @@
     width: 275px;
     margin-top: -90px;
   }
+  .profile-details-role h1 {
+    font-size: 19px;
+}
 }
