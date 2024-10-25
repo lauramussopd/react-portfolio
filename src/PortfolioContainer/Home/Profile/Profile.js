@@ -21,13 +21,9 @@ export default function Profile() {
               <h1>
                 <TypeAnimation
                   sequence={[
-                    "Enthusiastic Dev 🖥️",
+                    "Enthusiastic Dev",
                     1000,
-                    "Javascript Developer 📱",
-                    1000,
-                    "Climber 🧗🏻‍♀️",
-                    1000,
-                    "UI/UX Designer 🎨",
+                    "UI/UX Designer",
                     1000,
                   ]}
                   cursor={true} // Blinking cursor

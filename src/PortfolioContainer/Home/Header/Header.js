@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Header.css";
 
 export default function Header() {
-  const [ setSelectedScreen] = useState(0);
+ // const [ setSelectedScreen] = useState(0);
   const [showHeaderOptions, setShowHeaderOptions] = useState(false);
 
 
@@ -42,7 +42,7 @@ export default function Header() {
     if (!screenComponent) return;
 
     screenComponent.scrollIntoView({ behavior: "smooth" });
-    setSelectedScreen(index);
+    //setSelectedScreen(index);
     setShowHeaderOptions(false);
   };
   return (

@@ -85,15 +85,15 @@ const Resume = (props) => {
     </div>,
     <div className="resume-screen-container" key="work-experience">
       <ResumeHeading
-        heading="Technical Support Specialist & Junior Front-end Developer"
+        heading="Front-end Developer & Technical Support Specialist"
         subHeading="Etnia Eyewear Culture"
         fromDate="2021"
         toDate="Present"
       />
       <div className="experience-description resume-description-text">
-        - Develop and maintain front-end components for company websites,
-        ensuring a seamless user experience. Identify software bugs, open
-        detailed tickets, and follow up to ensure timely resolution.
+        - Develop and maintain front-end components with
+Vue and Typescript for company websites, ensuring
+a seamless user experience.
       </div>
       <div className="experience-description resume-description-text">
         - Website & Software Testing, identify software bugs, open detailed
