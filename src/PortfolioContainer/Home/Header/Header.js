@@ -4,13 +4,13 @@ import "../Home.css";
 import {
   TOTAL_SCREENS,
 } from "../../../utilities/commonUtils";
-// import ScrollService from "../../../utilities/ScrollService";
+import ScrollService from "../../../utilities/ScrollService";
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Header.css";
 
 export default function Header() {
-  const [ setSelectedScreen] = useState(0);
+ // const [ setSelectedScreen] = useState(0);
   const [showHeaderOptions, setShowHeaderOptions] = useState(false);
 
 
@@ -42,7 +42,7 @@ export default function Header() {
     if (!screenComponent) return;
 
     screenComponent.scrollIntoView({ behavior: "smooth" });
-    setSelectedScreen(index);
+  //  setSelectedScreen(index);
     setShowHeaderOptions(false);
   };
   return (
