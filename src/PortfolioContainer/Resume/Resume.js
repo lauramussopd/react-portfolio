@@ -87,6 +87,18 @@ const Resume = (props) => {
     ),
     (
       <div className="resume-screen-container" key="work-experience">
+         <ResumeHeading
+          heading="Consultant"
+          subHeading="Akkodis"
+          fromDate="2024"
+          toDate="Present"
+        />
+        <div className="experience-description resume-description-text">
+        Develop Bash scripts to automate processes, manage and analyze data with SQL Server, 
+        and deliver workshops and presentations for knowledge transfer. 
+        Document workflows and project outcomes to support collaboration, and work with cross-functional teams 
+        to tackle complex challenges.
+        </div>
         <ResumeHeading
           heading="Front-end Developer & Technical Support Specialist"
           subHeading="Etnia Eyewear Culture"
@@ -94,16 +106,10 @@ const Resume = (props) => {
           toDate="2024"
         />
         <div className="experience-description resume-description-text">
-        Develop and maintain front-end components with Vue and TypeScript, address bugs, and assist the sales team with inquiries, orders, and databases (SAP / C4C).        </div>
-
-        <ResumeHeading
-          heading="Consultant"
-          subHeading="Akkodis"
-          fromDate="2024"
-          toDate="Present"
-        />
-        <div className="experience-description resume-description-text">
-        Develop Bash scripts to automate processes, manage and analyze data with SQL Server, and deliver workshops and presentations for knowledge transfer. Document workflows and project outcomes to support collaboration, and work with cross-functional teams to tackle complex challenges.        </div>
+        Develop and maintain front-end components with Vue and TypeScript, address bugs, 
+        and assist the sales team with inquiries, orders, and databases (SAP / C4C).
+        </div>
+       
       </div>
     ),
     (
